@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.loan.simplelistview.MainActivity">
+<TextView
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:text="Nhập thông tin cần thêm"
+    android:textStyle="bold"
+    android:id="@+id/textTitle"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:textColor="@android:color/white"
+    android:background="@color/colorAccent"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2"
+        android:layout_marginTop="16dp">
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Nhập tên"
+            android:id="@+id/edutTextName"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Nhập tuổi"
+            android:id="@+id/edutTextAge"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="2">
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Nhập quê quán"
+            android:id="@+id/edutTextCountry"/>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Nhập giới tính"
+            android:id="@+id/edutTextGender"/>
+
+    </LinearLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="16pt"
+        android:text="Thêm"
+        android:id="@+id/buttonAdd"
+        android:background="@color/colorPrimary"
+        android:layout_gravity="center"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:text="Danh sách sinh viên"
+        android:textStyle="bold"
+        android:id="@+id/textList"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/holo_green_light"/>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/listview"
+        android:layout_marginTop="@dimen/activity_vertical_margin">
+
+    </ListView>
+</LinearLayout>

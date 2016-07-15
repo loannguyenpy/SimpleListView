@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <!--màu thì e lên mạng search mã màu e muốn rồi thêm nó vào đây-->
+    <!--thêm như sau-->
+    <!--trường name là tên mà e muốn đặt, đặt gì cũng đc. và chínhgiwuax >< là mã màu-->
+    <!--cách dùng thì như nãy a dùng á-->
+    <color name="colorBlack">#000000</color>
+</resources>
