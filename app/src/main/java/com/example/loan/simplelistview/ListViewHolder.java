@@ -21,11 +21,13 @@ public class ListViewHolder {
     TextView mCon;
     TextView mGen;
     TextView mList;
-    // EditText
-
     private Context mContext;
 
     //Phương thức khởi tạo cho nó 1 cái view để get id, view này lát nữa lấy bên adapter
+    //dc roi a
+    //Vậy lỗi là từ chỗ các hàm onclick
+    //:D
+    //
     //Cái view e truyền vào để get id chính là cái view e custom đó. Nên bắt sự kiện click item là bắt nó đấy
     public ListViewHolder(View view, Context context) {
         mList = (TextView) view.findViewById(R.id.textList);
@@ -36,36 +38,12 @@ public class ListViewHolder {
         //get id o view edit
 
         mContext = context;
-
-
-        ///==============
-
-        //E bắt ở đây luôn, ko cần đi dài dòng
-        //E chú ý, textView mà hiển thị a nói kía nó nằm ở MAin,mà e dang ở 1 class khác, e hiểu ko?, cái a vừa khoanh á. hiu a
-        //Vì vậy để dùng được nó, e phải có thằng đại diện cho nó, đĩ nhiên e phải truyền nó vào đây,
-        //Trong android, context là đại diện của activity nha////cho e xiu nha a// ok e...xong
-        //E hiểu đoạm trên chưa?roi a
-        //Mà context thì get ở activity,
-        //E thấy trong adapter mình có truyền context đúng ko?
-        //za
-        //Vậy giờ lấy nó qua đây thì truyền nó vào  thôi
-        //Vậy là có thằng đại diện cho activity
-        //Mà textview kia trên actity là private nên mình đâu đụng chạm nó được
-        //Vì vậy phải có hàm làm việc với nó nhá
-        //Giờ thỏa mái xử lý nà
-
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //Tên nằm ở dâu e biêt ko?. k a
-                //Set xong thì tên nằm ở textviewName
-                //ok ko e ok
-                //tiếp
-                //Vì sao a gọi vậy?
                 //vi mcontext dai dien cho main
-                //Ví dụ mContext a truyền vào từ DemoActivity thì nó đại đại diện cho ai? cho DemoActiviry, đúng rồi. E nhớ nhá
+                //Ví dụ mContext a truyền vào từ DemoActivity thì nó đại đại diện cho ai? cho DemoActiviry
                 //Truyền từ đâu thì nó đại diện cho thằng đó.
-                //ôi, a truyền basecontext
                 ((MainActivity) mContext).setmTextTitle("Tên: " + mName.getText() + ", Tuổi: " + mAge.getText());
                 //Xong e run xem
             }
@@ -86,16 +64,21 @@ public class ListViewHolder {
                 //Ví dụ a muốn hiện tosa ngáy đây thì a gọi như sau
                 Toast.makeText(mContext, "thông báo gì?", Toast.LENGTH_LONG).show();
                 //hổm rày là getBaseactivity, nhưng ở đây context đại diện activity nên cho nó vào là đc nha e
-                //ok a
-                //Rồi, chăm học thì sẽ nhanh hiểu thôi. Phần này còn chưa quá khó hiểu đâu
-                //hihi. ok a
-                //Đi ngủ nà. :D
-                //anh ngu ngon nha
-                //E cũng vậy nhá, ngủ ngon, mai trả bài cho a :D, a out á
+
             }
         });
 
-
+view.setLongClickable(true); // hàng này là 2, ok ko e. ok a
+        //Giờ e thử xử lý edit a xem cái
+        // xu li khi click vao edit ha a
+        //đúng rồi
+//        view.setOnLongClickListener(new View.OnLongClickListener() {
+//            @Override
+//            public boolean onLongClick(View v) {
+//
+//                return false;
+//            }
+//        });
         //========================SỰ KIỆN ADD===============================
         mGen.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -103,10 +86,11 @@ public class ListViewHolder {
                 Toast.makeText(mContext, "thông báo gì?", Toast.LENGTH_LONG).show();
             }
         });
-    }
+        //máy e là android 4. mấy? 4.4.2
+        //ok để a xem lại, đã, vụ này chưa gặp. hay a chay may ao thu xem
+        //để a xem thử nó có vấn đề gì với bản hệ điều hành cuae e ko đã
 
-    //Lấy xong thì cần set dữ liệu cho nó nha, cần hiển thị cái nào thì cho đối tượng đó vào
-    //E gắm pin
+    }
 
     public void setData(Student student) {
         //Giờ set dũ liệu nha
@@ -115,6 +99,4 @@ public class ListViewHolder {
         mCon.setText(student.getCountry());
         mGen.setText(student.getGender());
     }
-    //Xong view holder, quá dễ nhỡ :D
-    //Giờ thì dĩ nhiên tới Adapter
 }

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/mDelete"
+        android:title="Delete" />
+    <item
+        android:id="@+id/mEdit"
+        android:title="Edit" />
+    <!--e biết hàng có số 100 để làm gì?. ko a. Vậy thêm chi?. luc them cung vay ma ko them cung  v xmlns:app="http://schemas.android.com/apk/res-auto"
+    a chỉ quan tâm là e biết mới thêm vào. ko biết đừng thêm
+    e hiểu ko?.. luc dau e them, xong e xoa thu. nhung ben nay e chua xoa.
+    thật ra a cũng chưa biết nó để làm gì luôn đấy. :D. -->
+</menu>

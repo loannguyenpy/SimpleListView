@@ -95,15 +95,5 @@ public class ListviewAdapter extends BaseAdapter {
         }
         return view;
     }
-    //Xong hết
-    //Hiểu hồng :D. chac em hoc thuoc qua :p
-    //Cái Adapter thì e ko cần code đâu. LÀm y chang a thì được, nhưng nhớ đổi đối tượng, Còn riêng cái Holder thì bắc buộc
-    //e phải biết code nhá, vì mỗi bài mỗi view holder khác nhau. A cố tình tách view holder là để dễ dàng cho e dùng lại code :D
-    //moi bai thi viewholder khac nhau nhu the nao a
-    //Bài này có 4 textview thì e get id và set dữ liệu cho 4 cái. Lỡ bài khác nó 2 textview, 2 button thì e lại getid khác
-    //af hihi
-    //Ok ko
-    //ok
-    //Còn cái adapter, nhớ được thì tốt, ko nhớ thì copy dán rồi sửa đối tượng là xong :D. :v vay la xong het r ha a
-    //Uh e, xong rồi đấy
+
 }
